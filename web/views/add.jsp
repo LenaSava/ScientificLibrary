@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add new user</title>
+    <title>Add new scientificPublication</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
@@ -23,13 +23,13 @@
             out.println("<div class=\"w3-panel w3-green w3-display-container w3-card-4 w3-round\">\n" +
                     "   <span onclick=\"this.parentElement.style.display='none'\"\n" +
                     "   class=\"w3-button w3-margin-right w3-display-right w3-round-large w3-hover-green w3-border w3-border-green w3-hover-border-grey\">×</span>\n" +
-                    "   <h5>User '" + request.getAttribute("userName") + "' added!</h5>\n" +
+                    "   <h5>ScientificPublication '" + request.getAttribute("userName") + "' added!</h5>\n" +
                     "</div>");
         }
     %>
     <div class="w3-card-4">
         <div class="w3-container w3-center w3-green">
-            <h2>Add user</h2>
+            <h2>Add scientificPublication</h2>
         </div>
         <form method="post" class="w3-selection w3-light-grey w3-padding">
             <label>Name:

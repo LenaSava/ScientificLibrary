@@ -1,6 +1,6 @@
 package app.servlets;
 
-import app.entities.User;
+import app.entities.ScientificPublication;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -20,10 +20,12 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
-        String password = req.getParameter("pass");
-        User user = new User(name, password);
+        String lastName = req.getParameter("lastName");
+        String title = req.getParameter("title");
+        String age = req.getParameter("age");
+        ScientificPublication scientificPublication = new ScientificPublication(name, lastName, title, age);
         Model model = Model.getInstance();
-        model.add(user);
+        model.add(scientificPublication);
 
         req.setAttribute("userName", name);
         doGet(req, resp);

@@ -1,5 +1,6 @@
 package app.model;
-import app.entities.User;
+import app.entities.ScientificPublication;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,7 +8,7 @@ import java.util.stream.Collectors;
 public class Model {
     private static Model instance = new Model();
 
-    private List<User> model;
+    private List<ScientificPublication> model;
 
     public static Model getInstance() {
         return instance;
@@ -17,13 +18,13 @@ public class Model {
         model = new ArrayList<>();
     }
 
-    public void add(User user) {
-        model.add(user);
+    public void add(ScientificPublication scientificPublication) {
+        model.add(scientificPublication);
     }
 
     public List<String> list() {
         return model.stream()
-                .map(User::getName)
+                .map(ScientificPublication::getName)
                 .collect(Collectors.toList());
     }
 }
