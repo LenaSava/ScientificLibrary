@@ -1,17 +1,27 @@
 package app.entities;
 
 public class Monograph extends ScientificPublication {
-    private String autorName = "Anton";
-    private String autorLastname = "Leon";
-    private String title = "Планеты и бытие";
-    private String ageOfPublic = "1945";
+    private String typeOfPublication;
+    private String autorName;
+    private String autorLastname ;
+    private String title;
+    private String ageOfPublic;
 
-//    public Monograph() {
-//        this.autorName = autorName;
-//        this.autorLastname = autorLastName;
-//        this.title = "Планеты и бытие";
-//        this.ageOfPublic = "1945";
-//    }
+    public Monograph(String typeOfPublication, String autorName, String autorLastname, String title, String ageOfPublic) {
+        this.typeOfPublication = typeOfPublication;
+        this.autorName = autorName;
+        this.autorLastname = autorLastname;
+        this.title = title;
+        this.ageOfPublic = ageOfPublic;
+    }
+
+    public String getTypeOfPublication() {
+        return typeOfPublication;
+    }
+
+    public void setTypeOfPublication(String name) {
+        this.typeOfPublication = typeOfPublication;
+    }
 
     public String getName() {
         return autorName;
@@ -63,5 +73,9 @@ public class Monograph extends ScientificPublication {
 //        result = 31 * result + (ageOfPublic != null ? ageOfPublic.hashCode() : 0);
 //        return result;
 //    }
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
 }

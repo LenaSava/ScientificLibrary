@@ -2,18 +2,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Users</title>
+    <title>Publications</title>
 </head>
 
 <body>
 <div>
-    <h1>Super app!</h1>
+    <h1>List of Publications!</h1>
 </div>
 
 <div>
     <div>
         <div>
-            <h2>Users</h2>
+            <h2>Publications</h2>
         </div>
         <%
             List<String> names = (List<String>) request.getAttribute("userNames");
@@ -24,9 +24,12 @@
                     out.println("<li>" + s + "</li>");
                 }
                 out.println("</ui>");
-            } else out.println("<p>There are no users yet!</p>");
+            } else out.println("<p>There are no publications yet!</p>");
         %>
     </div>
+</div>
+
+</div>
 </div>
 
 <div>

@@ -1,16 +1,26 @@
 package app.entities;
 
 public class ScientificResearch extends ScientificPublication {
+    private String typeOfPublication;
     private String autorName;
     private String autorLastname ;
     private String title;
     private String ageOfPublic;
 
-    public ScientificResearch() {
-        this.autorName = "Valera";
-        this.autorLastname = "Salo";
-        this.title  = "Планеты и бытие";
-        this.ageOfPublic  = "1945";
+    public ScientificResearch(String typeOfPublication, String autorName, String autorLastname, String title, String ageOfPublic) {
+        this.typeOfPublication = typeOfPublication;
+        this.autorName = autorName;
+        this.autorLastname = autorLastname;
+        this.title  = title;
+        this.ageOfPublic  = ageOfPublic;
+    }
+
+    public String getTypeOfPublication() {
+        return typeOfPublication;
+    }
+
+    public void setTypeOfPublication(String name) {
+        this.typeOfPublication = typeOfPublication;
     }
 
     public String getName() {
@@ -43,5 +53,10 @@ public class ScientificResearch extends ScientificPublication {
 
     public void setAgeOfPublic(String ageOfPublic) {
         this.ageOfPublic = ageOfPublic;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

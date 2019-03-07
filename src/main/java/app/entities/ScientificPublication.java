@@ -1,6 +1,7 @@
 package app.entities;
 
-public class ScientificPublication {
+public abstract class ScientificPublication {
+    private String typeOfPublication;
     private String autorName;
     private String autorLastname ;
     private String title;
@@ -9,11 +10,20 @@ public class ScientificPublication {
     public ScientificPublication() {
     }
 
-    public ScientificPublication(String autorName, String autorLastname, String title, String ageOfPublic) {
+    public ScientificPublication(String typeOfPublication, String autorName, String autorLastname, String title, String ageOfPublic) {
+        this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
         this.autorLastname = autorLastname;
         this.title = title;
         this.ageOfPublic = ageOfPublic;
+    }
+
+    public String getTypeOfPublication() {
+        return typeOfPublication;
+    }
+
+    public void setTypeOfPublication(String name) {
+        this.typeOfPublication = typeOfPublication;
     }
 
     public String getName() {
@@ -50,12 +60,11 @@ public class ScientificPublication {
 
     @Override
     public String toString() {
-        return "ScientificPublication{" +
-                "name='" + autorName + '\'' +
-                ", last name is ='" + autorLastname + '\'' +
-                "title='" + title + '\'' +
-                "age of publication ='" + ageOfPublic + '\'' +
-                '}';
+        return "Type of Publication: " + getTypeOfPublication() +
+                ", Autor name is " + getName() + '\'' +
+                ", Autor lastname is " + getLastName() +
+                ", Title of Publication " + '\"' + getTitle() + '\"' +
+                ", age of publication = " + getAgeOfPublic() + " year!";
     }
 
 //    @Override

@@ -1,30 +1,47 @@
 package app.model;
+import app.entities.PublicationFactory;
 import app.entities.ScientificPublication;
+import app.entities.ScientificResearch;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.lang.String;
 
 public class Model {
     private static Model instance = new Model();
 
-    private List<ScientificPublication> model;
+    protected List<ScientificPublication> model = new ArrayList<>();
 
     public static Model getInstance() {
         return instance;
     }
 
-    private Model() {
-        model = new ArrayList<>();
+    public void createLibrary() {
+        PublicationFactory factory = new PublicationFactory();
+
+        ScientificPublication scientRes = factory.getPublications(PublicationType.SCIENTIFICRESERCH);
+        model.add(scientRes);
+        ScientificPublication mono = factory.getPublications(PublicationType.MONOGRAPH);
+        model.add(mono);
+
+
     }
 
-    public void add(ScientificPublication scientificPublication) {
-        model.add(scientificPublication);
+    public List<String> listName() {
+        createLibrary();
+        return model
+                .stream()
+                .map(ScientificPublication::toString)
+                .collect(Collectors.toList());
     }
 
-    public List<String> list() {
-        return model.stream()
-                .map(ScientificPublication::getName)
+    public List<ScientificPublication> slist() {
+        return model
+                .stream()
+                .sorted()
                 .collect(Collectors.toList());
     }
 }
+
+
