@@ -2,17 +2,17 @@ package app.entities;
 
 public class Monograph extends ScientificPublication {
     private String typeOfPublication;
-    private String autorName;
-    private String autorLastname ;
-    private String title;
+    static String autorName;
+    static String subject;
     private String ageOfPublic;
+    static String link = "Monograph, Autor name is Artur Pirojkov";
 
-    public Monograph(String typeOfPublication, String autorName, String autorLastname, String title, String ageOfPublic) {
+    public Monograph(String typeOfPublication, String autorName, String subject, String ageOfPublic) {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
-        this.autorLastname = autorLastname;
-        this.title = title;
+        this.subject = subject;
         this.ageOfPublic = ageOfPublic;
+
     }
 
     public String getTypeOfPublication() {
@@ -31,20 +31,12 @@ public class Monograph extends ScientificPublication {
         this.autorName = autorName;
     }
 
-    public String getLastName() {
-        return autorLastname;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setLastname(String name) {
-        this.autorLastname = autorLastname;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String name) {
-        this.title = title;
+    public void setSubject(String name) {
+        this.subject = subject;
     }
 
     public String getAgeOfPublic() {
@@ -55,27 +47,16 @@ public class Monograph extends ScientificPublication {
         this.ageOfPublic = ageOfPublic;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        ScientificPublications scientificPublications = (ScientificPublications) o;
-//
-//        if (autorName != null ? !autorName.equals(scientificPublications.autorName) : scientificPublications.autorName != null) return false;
-//        return ageOfPublic != null ? ageOfPublic.equals(scientificPublications.ageOfPublic) : scientificPublications.ageOfPublic == null;
-//
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = autorName != null ? autorName.hashCode() : 0;
-//        result = 31 * result + (ageOfPublic != null ? ageOfPublic.hashCode() : 0);
-//        return result;
-//    }
+    public static String getLink() {
+        return autorName + subject;
+    }
+
     @Override
     public String toString() {
-        return super.toString();
-    }
+            return "Type of Publication: " + getTypeOfPublication() +
+                    ", Autor name is " + getName() + '\'' +
+                    ", Subject of topic is " + '\"' + getSubject() + '\"' +
+                    ", age of publication = " + getAgeOfPublic() + " year!";
+        }
 
 }

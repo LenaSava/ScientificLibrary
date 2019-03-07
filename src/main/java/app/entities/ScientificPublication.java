@@ -3,17 +3,12 @@ package app.entities;
 public abstract class ScientificPublication {
     private String typeOfPublication;
     private String autorName;
-    private String autorLastname ;
     private String title;
     private String ageOfPublic;
 
     public ScientificPublication() {
-    }
-
-    public ScientificPublication(String typeOfPublication, String autorName, String autorLastname, String title, String ageOfPublic) {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
-        this.autorLastname = autorLastname;
         this.title = title;
         this.ageOfPublic = ageOfPublic;
     }
@@ -34,14 +29,6 @@ public abstract class ScientificPublication {
         this.autorName = autorName;
     }
 
-    public String getLastName() {
-        return autorLastname;
-    }
-
-    public void setLastName(String autorLastname) {
-        this.autorLastname = autorLastname;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -60,11 +47,7 @@ public abstract class ScientificPublication {
 
     @Override
     public String toString() {
-        return "Type of Publication: " + getTypeOfPublication() +
-                ", Autor name is " + getName() + '\'' +
-                ", Autor lastname is " + getLastName() +
-                ", Title of Publication " + '\"' + getTitle() + '\"' +
-                ", age of publication = " + getAgeOfPublic() + " year!";
+        return "Type of Publication: " + getTypeOfPublication();
     }
 
 //    @Override
