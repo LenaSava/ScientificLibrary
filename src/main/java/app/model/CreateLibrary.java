@@ -1,20 +1,19 @@
 package app.model;
-import app.entities.Monograph;
-import app.entities.ScientificPublication;
-import app.entities.ScientificResearch;
-import app.model.*;
+import app.model.entities.ScientificPublication;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.lang.String;
 
-public class Model {
-    private static Model instance = new Model();
+public class CreateLibrary {
+    private static CreateLibrary instance = new CreateLibrary();
     protected List<ScientificPublication> model = new ArrayList<>();
-    private List<ScientificPublication> sortByAge;
+    protected List<ScientificPublication> slist = new ArrayList<>();
 
 
-    public static Model getInstance() {
+    public static CreateLibrary getInstance() {
         return instance;
     }
 
@@ -35,16 +34,22 @@ public class Model {
                 .collect(Collectors.toList());
     }
 
+//        public List<ScientificPublication> slist() {
+//        listName();
+//        return model
+//                .stream()
+//                .sorted(Comparator.comparing(ScientificPublication::getAgeOfPublic))
+//                .collect(Collectors.toList());
+//    }
+
     public List<ScientificPublication> slist() {
+        listName();
         return model
                 .stream()
-                .sorted()
+                .sorted(Comparator.comparing(ScientificPublication::getAgeOfPublic))
                 .collect(Collectors.toList());
     }
 
-    public List<ScientificPublication> getSortedListByAge() {
-        return sortByAge;
-    }
 }
 
 

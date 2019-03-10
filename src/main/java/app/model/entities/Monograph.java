@@ -1,13 +1,13 @@
-package app.entities;
+package app.model.entities;
 
 public class Monograph extends ScientificPublication {
     private String typeOfPublication;
     static String autorName;
     static String subject;
-    private String ageOfPublic;
+    private int ageOfPublic;
     static String link = "Monograph, Autor name is Artur Pirojkov";
 
-    public Monograph(String typeOfPublication, String autorName, String subject, String ageOfPublic) {
+    public Monograph(String typeOfPublication, String autorName, String subject, int ageOfPublic) {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
         this.subject = subject;
@@ -39,11 +39,11 @@ public class Monograph extends ScientificPublication {
         this.subject = subject;
     }
 
-    public String getAgeOfPublic() {
+    public int getAgeOfPublic() {
         return ageOfPublic;
     }
 
-    public void setAgeOfPublic(String ageOfPublic) {
+    public void setAgeOfPublic(int ageOfPublic) {
         this.ageOfPublic = ageOfPublic;
     }
 

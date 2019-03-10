@@ -1,12 +1,12 @@
-package app.entities;
+package app.model.entities;
 
 public class ScientificResearch extends ScientificPublication {
     private String typeOfPublication;
     private String autorName;
     private String title;
-    private String ageOfPublic;
+    private int ageOfPublic;
 
-    public ScientificResearch(String typeOfPublication, String autorName, String title, String ageOfPublic) {
+    public ScientificResearch(String typeOfPublication, String autorName, String title, int ageOfPublic) {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
         this.title  = title;
@@ -37,11 +37,11 @@ public class ScientificResearch extends ScientificPublication {
         this.title = title;
     }
 
-    public String getAgeOfPublic() {
+    public int getAgeOfPublic() {
         return ageOfPublic;
     }
 
-    public void setAgeOfPublic(String ageOfPublic) {
+    public void setAgeOfPublic(int ageOfPublic) {
         this.ageOfPublic = ageOfPublic;
     }
 

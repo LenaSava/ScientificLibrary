@@ -1,15 +1,16 @@
-package app.entities;
+package app.model.entities;
 
-public class Memoir extends ScientificPublication {
+public abstract class ScientificPublication {
     private String typeOfPublication;
-    static String autorName;
-    private String ageOfPublic;
+    private String autorName;
+    private String title;
+    private int ageOfPublic;
 
-    public Memoir(String typeOfPublication, String autorName, String ageOfPublic) {
+    public ScientificPublication() {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
+        this.title = title;
         this.ageOfPublic = ageOfPublic;
-
     }
 
     public String getTypeOfPublication() {
@@ -28,21 +29,25 @@ public class Memoir extends ScientificPublication {
         this.autorName = autorName;
     }
 
+    public String getTitle() {
+        return title;
+    }
 
-    public String getAgeOfPublic() {
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getAgeOfPublic() {
         return ageOfPublic;
     }
 
-    public void setAgeOfPublic(String ageOfPublic) {
+    public void setAgeOfPublic(int password) {
         this.ageOfPublic = ageOfPublic;
     }
 
-
     @Override
     public String toString() {
-        return "Type of Publication: " + getTypeOfPublication() +
-                ", Autor name is " + getName() + '\'' +
-                ", age of publication = " + getAgeOfPublic() + " year!";
+        return "Type of Publication: " + getTypeOfPublication();
     }
 
 }
