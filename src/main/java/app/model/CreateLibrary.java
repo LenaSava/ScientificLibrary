@@ -33,8 +33,9 @@ public class CreateLibrary {
                 .map(ScientificPublication::toString)
                 .collect(Collectors.toList());
     }
-
-//        public List<ScientificPublication> slist() {
+//
+//
+//    public List<ScientificPublication> slist() {
 //        listName();
 //        return model
 //                .stream()
@@ -42,12 +43,8 @@ public class CreateLibrary {
 //                .collect(Collectors.toList());
 //    }
 
-    public List<ScientificPublication> slist() {
-        listName();
-        return model
-                .stream()
-                .sorted(Comparator.comparing(ScientificPublication::getAgeOfPublic))
-                .collect(Collectors.toList());
+    public List<ScientificPublication> getPublication () {
+        return model;
     }
 
 }
