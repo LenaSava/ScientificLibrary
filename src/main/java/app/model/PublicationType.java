@@ -20,10 +20,16 @@ public enum PublicationType {
         public ScientificPublication factory() {
             return new Memoir("Memoir","Sasha Den", 1905);
         }
+    },
+    SOURCESTUDY {
+        public ScientificPublication factory() {
+            return new Memoir("Memoir","Sasha Den", 1905);
+        }
     };
     public abstract ScientificPublication factory();
 
 //    SCIENTIFICPUBLICATIONS,
+
 //    DOCUMENTARY,
 
 //    SOURCESTUDY
