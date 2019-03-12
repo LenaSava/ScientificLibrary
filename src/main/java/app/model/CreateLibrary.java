@@ -24,6 +24,8 @@ public class CreateLibrary {
         model.add(memoir);
         ScientificPublication mono = PublicationType.valueOf("MONOGRAPH").factory();
         model.add(mono);
+        ScientificPublication study = PublicationType.valueOf("SOURCESTUDY").factory();
+        model.add(study);
     }
 
     public List<String> listName() {

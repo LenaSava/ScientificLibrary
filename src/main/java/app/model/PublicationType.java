@@ -1,9 +1,6 @@
 package app.model;
 
-import app.model.entities.Memoir;
-import app.model.entities.Monograph;
-import app.model.entities.ScientificPublication;
-import app.model.entities.ScientificResearch;
+import app.model.entities.*;
 
 public enum PublicationType {
     SCIENTIFICRESERCH {
@@ -23,7 +20,7 @@ public enum PublicationType {
     },
     SOURCESTUDY {
         public ScientificPublication factory() {
-            return new Memoir("Memoir","Sasha Den", 1905);
+            return new Sourcestudy("Sourcestudy","Sasha Kiv", 1945);
         }
     };
     public abstract ScientificPublication factory();

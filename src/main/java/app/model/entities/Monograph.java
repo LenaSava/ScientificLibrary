@@ -54,8 +54,8 @@ public class Monograph extends ScientificPublication {
     @Override
     public String toString() {
             return "Type of Publication: " + getTypeOfPublication() +
-                    ", Autor name is " + getName() + '\'' +
-                    ", Subject of topic is " + '\"' + getSubject() + '\"' +
+                    ", Autor name is " + getName() +
+                    ", Subject of topic is " + getSubject() + '\"' +
                     ", age of publication = " + getAgeOfPublic() + " year!";
         }
 

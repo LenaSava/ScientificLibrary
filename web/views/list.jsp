@@ -26,9 +26,17 @@
                 }
                 out.println("</ui>");
             } else out.println("<p>There are no publications yet!</p>");
+
         %>
     </div>
 </div>
+
+<div>
+    <form action="sortingByAge" method="sorting" >
+        <button type="submit">Sort by Age</button>
+
+
+    </form>
 
 </div>
 </div>

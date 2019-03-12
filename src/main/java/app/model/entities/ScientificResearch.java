@@ -52,9 +52,9 @@ public class ScientificResearch extends ScientificPublication {
     @Override
     public String toString() {
         return "Type of Publication: " + getTypeOfPublication() +
-                ", Autors name are " + getName() + '\'' +
-                ", Title of Publication " + '\"' + getTitle() + '\"' +
-                ", age of publication = " + getAgeOfPublic() + " year!" + '\"' +
+                ", Autors name are " + getName() +
+                ", Title of Publication " + getTitle() +
+                ", age of publication = " + getAgeOfPublic() + " year!" +
         ", link on publication is " + getLink();
     }
 }

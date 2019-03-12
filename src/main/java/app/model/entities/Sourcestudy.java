@@ -1,11 +1,11 @@
 package app.model.entities;
 
-public class Memoir extends ScientificPublication {
+public class Sourcestudy extends ScientificPublication {
     private String typeOfPublication;
     static String autorName;
     private int ageOfPublic;
 
-    public Memoir(String typeOfPublication, String autorName, int ageOfPublic) {
+    public Sourcestudy(String typeOfPublication, String autorName, int ageOfPublic) {
         this.typeOfPublication = typeOfPublication;
         this.autorName = autorName;
         this.ageOfPublic = ageOfPublic;
